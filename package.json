@@ -1,0 +1,46 @@
+{
+  "name": "limeihua-taproot-all-bridge",
+  "version": "1.0.0",
+  "description": "Bridge between ERC-20 (Ethereum) and Taproot Assets (Bitcoin Lightning Network)",
+  "main": "backend/server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node backend/server.js",
+    "build": "npm run build:contracts && npm run build:frontend",
+    "build:contracts": "hardhat compile",
+    "build:frontend": "cd frontend && npm run build",
+    "test": "hardhat test",
+    "deploy": "hardhat run scripts/deploy.js --network sepolia",
+    "start": "node backend/server.js"
+  },
+  "keywords": [
+    "bridge",
+    "ethereum",
+    "bitcoin",
+    "taproot",
+    "erc20",
+    "lightning"
+  ],
+  "author": "Mr. Kanutsanan Pongpanna",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "ethers": "^6.7.1",
+    "axios": "^1.4.0",
+    "dotenv": "^16.3.1",
+    "cors": "^2.8.5",
+    "body-parser": "^1.20.2",
+    "web3": "^1.10.0",
+    "bitcoin-lib": "^0.1.0"
+  },
+  "devDependencies": {
+    "hardhat": "^2.17.0",
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "@nomiclabs/hardhat-etherscan": "^3.1.7",
+    "hardhat-gas-reporter": "^1.0.9",
+    "solidity-coverage": "^0.8.4",
+    "chai": "^4.3.7",
+    "hardhat-deploy": "^0.11.32"
+  }
+}
