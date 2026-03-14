@@ -1,1103 +1,657 @@
-# LiMeiHua Taproot All Bridge
+# LiMeiHua Taproot Assets - Comprehensive Multi-Language Documentation
 
-> ชุดซอฟต์แวร์ชุดนี้ มีไว้เพื่อเป็นโครงสร้างพื้นฐานทางการเงินยุคใหม่เพื่อรองรับการไหลของเงินจำนวนมหาศาลของท่านผู้เฒ่าหลี่เหมยฮัว หรือ LiMeiHua Grand Mother และ source code นี้สร้างโดย Mr.Kanutsanan Pongpanna (นายคณัสนันท์ พงษ์พันนา) URL:https://chatgpt.com/g/g-68d289535dec81919445deb9830f2d8e-kanutsanan-pongpanna
-
-**Bridge ERC-20 Tokens from Ethereum to Taproot Assets on Bitcoin Lightning Network**
-
-![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
-![Solidity](https://img.shields.io/badge/solidity-%5E0.8.0-blue.svg)
-![Node.js](https://img.shields.io/badge/node.js-18%2B-green.svg)
+> ชุดซอฟต์แวร์ชุดนี้ มีไว้เพื่อเป็นโครงสร้างพื้นฐานทางการเงินยุคใหม่เพื่อรองรับการไหลของเงินจำนวนมหาศาลของท่านผู้เฒ่าหลี่เหมยฮัว หรือ LiMeiHua Grand Mother 
+> และ source code นี้สร้างโดย Mr.Kanutsanan Pongpanna (นายคณัสนันท์ พงษ์พันนา) 
+> URL: https://chatgpt.com/g/g-68d289535dec81919445deb9830f2d8e-kanutsanan-pongpanna
 
 ---
 
-## 📚 Documentation in Multiple Languages
+## 📖 Table of Contents
 
-- **[ไทย (Thai)](#ไทย)** - Thai Documentation
-- **[English](#english)** - English Documentation
-- **[中文 (Chinese Simplified)](#中文简体)** - Chinese Simplified
-- **[中文繁體 (Chinese Traditional)](#中文繁體)** - Chinese Traditional
-- **[日本語 (Japanese)](#日本語)** - Japanese
-- **[한국어 (Korean)](#한국어)** - Korean
-- **[Español (Spanish)](#español)** - Spanish
-- **[Français (French)](#français)** - French
-- **[Deutsch (German)](#deutsch)** - German
-- **[Português (Portuguese)](#português)** - Portuguese
-- **[Русский (Russian)](#русский)** - Russian
-- **[العربية (Arabic)](#العربية)** - Arabic
-- **[हिन्दी (Hindi)](#हिन्दी)** - Hindi
-- **[Tiếng Việt (Vietnamese)](#tiếng-việt)** - Vietnamese
-- **[Bahasa Indonesia (Indonesian)](#bahasa-indonesia)** - Indonesian
-- **[Bahasa Melayu (Malay)](#bahasa-melayu)** - Malay
-- **[Türkçe (Turkish)](#türkçe)** - Turkish
-- **[Italiano (Italian)](#italiano)** - Italian
-- **[Nederlands (Dutch)](#nederlands)** - Dutch
-- **[Polski (Polish)](#polski)** - Polish
-- **[Svenska (Swedish)](#svenska)** - Swedish
-- **[Українська (Ukrainian)](#українська)** - Ukrainian
-- **[Čeština (Czech)](#čeština)** - Czech
-- **[Română (Romanian)](#română)** - Romanian
-- **[Ελληνικά (Greek)](#ελληνικά)** - Greek
-- **[עברית (Hebrew)](#עברית)** - Hebrew
-- **[বাংলা (Bengali)](#বাংলা)** - Bengali
-- **[Filipino (Tagalog)](#filipino)** - Filipino
-- **[Kiswahili (Swahili)](#kiswahili)** - Swahili
+- [🌐 Available Languages](#-available-languages)
+- [📚 Documentation by Language](#-documentation-by-language)
+- [🎯 Project Overview](#-project-overview)
+- [✨ Features](#-features)
+- [🚀 Getting Started](#-getting-started)
+- [💡 Use Cases](#-use-cases)
+- [🔧 Technical Stack](#-technical-stack)
+- [📊 Language Statistics](#-language-statistics)
 
 ---
 
-## ไทย
+## 🌐 Available Languages
 
-### ภาพรวม
+This project supports **40+ languages** across multiple regions:
 
-LiMeiHua Taproot All Bridge เป็นสะพานเชื่อมระหว่าง Ethereum (ERC-20) กับ Bitcoin Lightning Network (Taproot Assets) ที่ช่วยให้ผู้ใช้สามารถแลกเปลี่ยน token ข้ามเครือข่ายได้อย่างง่ายดาย
+### ASEAN Region (9 Languages)
+🇹🇭 Thai | 🇱🇦 Lao | 🇲🇲 Burmese | 🇻🇳 Vietnamese | 🇰🇭 Khmer | 🇲🇾 Malay | 🇮🇩 Indonesian | 🇵🇭 Filipino | 🇱🇰 Tamil
 
-### ฟีเจอร์หลัก
+### Other Regions (5 Languages)
+🇷🇺 Russian | 🇲🇳 Mongolian | 🇱🇰 Sinhala | 🇧🇹 Dzongkha | 🇳🇵 Nepali
 
-- 🌉 **Bridge ERC-20 ↔ Taproot Assets** - แลกเปลี่ยน token ระหว่างสองเครือข่าย
-- 💰 **ค่าธรรมชาติต่ำ** - ค่า bridge เพียง 0.25%
-- ⚡ **รวดเร็ว** - ยืนยันใน 10-30 นาที
-- 🔒 **ปลอดภัย** - Smart Contract ที่ได้รับการตรวจสอบ
-- 📊 **โปร่งใส** - ดูประวัติการทำธุรกรรมทั้งหมด
+### India (21 Languages)
+🇮🇳 Hindi | Bengali | Telugu | Marathi | Tamil | Urdu | Gujarati | Kannada | Malayalam | Odia | Punjabi | Assamese | Maithili | Santali | Kashmiri | Nepali | Sindhi | Dogri | Manipuri | Bodo | Konkani
 
-### การติดตั้ง
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-All-Bridge.git
-cd limeihua-taproot-all-bridge
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### การใช้งาน
-
-1. เชื่อมต่อ Ethereum wallet (MetaMask)
-2. เลือก token ที่ต้องการ bridge
-3. ใส่จำนวน token และ Bitcoin address
-4. ยืนยันการทำธุรกรรม
-5. รอการยืนยันบน Bitcoin
+### Global (20+ Languages)
+🌍 English | 🇨🇳 Chinese (Simplified & Traditional) | 🇯🇵 Japanese | 🇰🇷 Korean | 🇪🇸 Spanish | 🇫🇷 French | 🇩🇪 German | 🇵🇹 Portuguese | 🇸🇦 Arabic | 🇹🇷 Turkish | 🇮🇹 Italian | 🇳🇱 Dutch | 🇵🇱 Polish | 🇸🇪 Swedish | 🇺🇦 Ukrainian | 🇨🇿 Czech | 🇷🇴 Romanian | 🇬🇷 Greek | 🇮🇱 Hebrew | 🇹🇿 Swahili
 
 ---
 
-## English
+## 📚 Documentation by Language
 
-### Overview
+### English Documentation
+**LiMeiHua Taproot Assets** is a modern financial infrastructure platform designed to support massive money flow for LiMeiHua Grand Mother. This comprehensive system enables users to create, manage, and trade Taproot Assets tokens on the Bitcoin Lightning Network.
 
-LiMeiHua Taproot All Bridge is a decentralized bridge connecting Ethereum (ERC-20) with Bitcoin Lightning Network (Taproot Assets), enabling seamless token swaps across blockchains.
+**Key Features:**
+- Create custom Taproot Assets tokens with flexible parameters
+- Manage token supply (fixed, mintable, or burnable)
+- Calculate gas fees and transaction costs
+- Send and receive tokens on Lightning Network
+- Multi-platform support (Web, Mobile, Desktop)
+- World ID integration for enhanced security
+- Airdrop distribution system
+- Payment gateway integration
+- Lightning Node management
 
-### Key Features
-
-- 🌉 **Bridge ERC-20 ↔ Taproot Assets** - Swap tokens between two networks
-- 💰 **Low Fees** - Only 0.25% bridge fee
-- ⚡ **Fast** - Confirmation in 10-30 minutes
-- 🔒 **Secure** - Audited Smart Contracts
-- 📊 **Transparent** - View complete transaction history
-
-### Installation
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-All-Bridge.git
-cd limeihua-taproot-all-bridge
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Usage
-
-1. Connect Ethereum wallet (MetaMask)
-2. Select token to bridge
-3. Enter amount and Bitcoin address
-4. Confirm transaction
-5. Wait for Bitcoin confirmation
+**Getting Started:**
+1. Visit the platform or install the application
+2. Connect your Lightning Network wallet
+3. Create your first Taproot Assets token
+4. Start managing your digital assets
 
 ---
 
-## 中文简体
+### ไทย (Thai Documentation)
+**LiMeiHua Taproot Assets** เป็นแพลตฟอร์มโครงสร้างพื้นฐานทางการเงินสมัยใหม่ที่ออกแบบมาเพื่อรองรับการไหลของเงินจำนวนมหาศาลของท่านผู้เฒ่าหลี่เหมยฮัว ระบบที่ครอบคลุมนี้ช่วยให้ผู้ใช้สามารถสร้าง จัดการ และซื้อขาย Taproot Assets tokens บน Bitcoin Lightning Network
 
-### 概述
+**ฟีเจอร์หลัก:**
+- สร้าง Taproot Assets tokens ที่กำหนดเองได้
+- จัดการปริมาณ token (fixed, mintable, burnable)
+- คำนวณค่าแก๊สและค่าธุรกรรม
+- ส่งและรับ tokens บน Lightning Network
+- รองรับหลายแพลตฟอร์ม (Web, Mobile, Desktop)
+- บูรณาการ World ID เพื่อความปลอดภัยที่ดีขึ้น
+- ระบบแจกจ่าย Airdrop
+- บูรณาการ Payment Gateway
+- จัดการ Lightning Node
 
-LiMeiHua Taproot All Bridge 是一个去中心化的跨链桥接，连接以太坊（ERC-20）和比特币闪电网络（Taproot Assets），实现无缝的跨链代币交换。
-
-### 主要功能
-
-- 🌉 **ERC-20 ↔ Taproot Assets 桥接** - 在两个网络之间交换代币
-- 💰 **低费用** - 仅 0.25% 的桥接费
-- ⚡ **快速** - 10-30 分钟内确认
-- 🔒 **安全** - 已审计的智能合约
-- 📊 **透明** - 查看完整的交易历史
-
-### 安装
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-All-Bridge.git
-cd limeihua-taproot-all-bridge
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### 使用方法
-
-1. 连接以太坊钱包（MetaMask）
-2. 选择要桥接的代币
-3. 输入金额和比特币地址
-4. 确认交易
-5. 等待比特币确认
+**เริ่มต้นใช้งาน:**
+1. เยี่ยมชมแพลตฟอร์มหรือติดตั้งแอปพลิเคชัน
+2. เชื่อมต่อ Lightning Network wallet ของคุณ
+3. สร้าง Taproot Assets token แรกของคุณ
+4. เริ่มจัดการสินทรัพย์ดิจิทัลของคุณ
 
 ---
 
-## 中文繁體
+### ລາວ (Lao Documentation)
+**LiMeiHua Taproot Assets** ແມ່ນແພັດຟອມໂຄງສ້າງພື້ນຖານດ້ານການເງິນສະໄໝໃໝ່ທີ່ອອກແບບມາເພື່ອສະໜັບສະໜູນການໄຫຼຂອງເງິນຈໍານວນຫຼວງຫຼາຍສໍາລັບທ່ານຜູ້ເຖົ້າຫລີ່ເຫມຍຮວົ (LiMeiHua Grand Mother)
 
-### 概述
-
-LiMeiHua Taproot All Bridge 是一個去中心化的跨鏈橋接，連接以太坊（ERC-20）和比特幣閃電網路（Taproot Assets），實現無縫的跨鏈代幣交換。
-
-### 主要功能
-
-- 🌉 **ERC-20 ↔ Taproot Assets 橋接** - 在兩個網路之間交換代幣
-- 💰 **低費用** - 僅 0.25% 的橋接費
-- ⚡ **快速** - 10-30 分鐘內確認
-- 🔒 **安全** - 已審計的智能合約
-- 📊 **透明** - 查看完整的交易歷史
-
-### 安裝
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-All-Bridge.git
-cd limeihua-taproot-all-bridge
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### 使用方法
-
-1. 連接以太坊錢包（MetaMask）
-2. 選擇要橋接的代幣
-3. 輸入金額和比特幣地址
-4. 確認交易
-5. 等待比特幣確認
+**ຄຸນສົມບັດຫຼັກ:**
+- ສ້າງ Taproot Assets tokens ທີ່ກໍາຫນົດເອງໄດ້
+- ຈັດການປະລິມານ token (fixed, mintable, burnable)
+- ຄໍານວນຄ່າແກ໊ສແລະຄ່າທຸລະກໍາ
+- ສົ່ງແລະຮັບ tokens ໃນ Lightning Network
+- ສະໜັບສະໜູນຫຼາຍແພັດຟອມ (Web, Mobile, Desktop)
+- ປະສົມປະສານ World ID ສໍາລັບຄວາມປອດໄພທີ່ດີຂຶ້ນ
+- ລະບົບແຈກຢາຍ Airdrop
+- ປະສົມປະສານ Payment Gateway
+- ຈັດການ Lightning Node
 
 ---
 
-## 日本語
+### မြန်မာ (Burmese Documentation)
+**LiMeiHua Taproot Assets** သည် LiMeiHua Grand Mother အတွက် 거대한ငွေ့စီးဆင်းမှုကို ထောက်ခံရန် ဒီဇိုင်းထုတ်ထားသော ခေတ်သစ် ငွေကြေးအခြေခံ ကွန်ပ်ျူတာ ပလက်ဖောင်းဖြစ်သည်။
 
-### 概要
-
-LiMeiHua Taproot All Bridge は、Ethereum（ERC-20）とBitcoin Lightning Network（Taproot Assets）を接続する分散型ブリッジで、シームレスなクロスチェーントークンスワップを実現します。
-
-### 主な機能
-
-- 🌉 **ERC-20 ↔ Taproot Assets ブリッジ** - 2つのネットワーク間でトークンを交換
-- 💰 **低手数料** - わずか 0.25% のブリッジ手数料
-- ⚡ **高速** - 10～30分で確認
-- 🔒 **安全** - 監査済みのスマートコントラクト
-- 📊 **透明性** - 完全なトランザクション履歴を表示
-
-### インストール
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-All-Bridge.git
-cd limeihua-taproot-all-bridge
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### 使用方法
-
-1. Ethereumウォレット（MetaMask）を接続
-2. ブリッジするトークンを選択
-3. 金額とBitcoinアドレスを入力
-4. トランザクションを確認
-5. Bitcoin確認を待つ
+**အဓိက ဝိသေသလက္ခဏာများ:**
+- စိတ်ကြိုက် Taproot Assets tokens များ ဖန်တီးခြင်း
+- Token ပမာណ ကိုင်တွယ်ခြင်း (fixed, mintable, burnable)
+- ဂ်ဆ ကုန်ကျစရိတ် တွက်ချက်ခြင်း
+- Lightning Network တွင် tokens ပို့ခြင်း နှင့် လက်ခံခြင်း
+- အများအပြား ပလက်ဖောင်း ထောက်ခံခြင်း (Web, Mobile, Desktop)
+- ကောင်းမွန်သော လုံခြုံရေးအတွက် World ID ပေါင်းစပ်ခြင်း
+- Airdrop ဖြန့်ဝေမှု စနစ်
+- Payment Gateway ပေါင်းစပ်ခြင်း
+- Lightning Node စီမံခန့်ခွဲခြင်း
 
 ---
 
-## 한국어
+### Tiếng Việt (Vietnamese Documentation)
+**LiMeiHua Taproot Assets** là một nền tảng cơ sở hạ tầng tài chính hiện đại được thiết kế để hỗ trợ dòng tiền khổng lồ cho bà LiMeiHua. Hệ thống toàn diện này cho phép người dùng tạo, quản lý và giao dịch các token Taproot Assets trên Bitcoin Lightning Network.
 
-### 개요
-
-LiMeiHua Taproot All Bridge는 Ethereum(ERC-20)과 Bitcoin Lightning Network(Taproot Assets)를 연결하는 분산형 브릿지로, 원활한 크로스체인 토큰 스왑을 가능하게 합니다.
-
-### 주요 기능
-
-- 🌉 **ERC-20 ↔ Taproot Assets 브릿지** - 두 네트워크 간 토큰 교환
-- 💰 **낮은 수수료** - 단 0.25%의 브릿지 수수료
-- ⚡ **빠른 속도** - 10~30분 내 확인
-- 🔒 **안전성** - 감사된 스마트 계약
-- 📊 **투명성** - 완전한 거래 내역 확인
-
-### 설치
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-All-Bridge.git
-cd limeihua-taproot-all-bridge
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### 사용 방법
-
-1. Ethereum 지갑(MetaMask) 연결
-2. 브릿지할 토큰 선택
-3. 금액 및 Bitcoin 주소 입력
-4. 거래 확인
-5. Bitcoin 확인 대기
+**Các Tính Năng Chính:**
+- Tạo các token Taproot Assets tùy chỉnh
+- Quản lý nguồn cung token (cố định, có thể tạo, có thể đốt)
+- Tính toán phí gas và chi phí giao dịch
+- Gửi và nhận token trên Lightning Network
+- Hỗ trợ nhiều nền tảng (Web, Mobile, Desktop)
+- Tích hợp World ID để tăng cường bảo mật
+- Hệ thống phân phối Airdrop
+- Tích hợp Payment Gateway
+- Quản lý Lightning Node
 
 ---
 
-## Español
+### ខ្មែរ (Khmer Documentation)
+**LiMeiHua Taproot Assets** ជាវេទិកាហិរញ្ញវត្ថុលោកទំនើបដែលត្រូវបានរចនាឡើងដើម្បីគាំទ្របរិមាណលុយដ៏ច្រើនសម្រាប់ម្ដាយលីមីហួ។ ប្រព័ន្ធលម្អិតនេះអនុញ្ញាតឱ្យអ្នកប្រើប្រាស់បង្កើត គ្រប់គ្រង និងលក់ទិញ Taproot Assets tokens នៅលើបណ្តាញ Bitcoin Lightning Network។
 
-### Descripción General
-
-LiMeiHua Taproot All Bridge es un puente descentralizado que conecta Ethereum (ERC-20) con Bitcoin Lightning Network (Taproot Assets), permitiendo intercambios de tokens sin problemas entre cadenas.
-
-### Características Principales
-
-- 🌉 **Puente ERC-20 ↔ Taproot Assets** - Intercambia tokens entre dos redes
-- 💰 **Tarifas Bajas** - Solo 0.25% de tarifa de puente
-- ⚡ **Rápido** - Confirmación en 10-30 minutos
-- 🔒 **Seguro** - Contratos inteligentes auditados
-- 📊 **Transparente** - Ver historial completo de transacciones
-
-### Instalación
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-All-Bridge.git
-cd limeihua-taproot-all-bridge
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Uso
-
-1. Conectar billetera Ethereum (MetaMask)
-2. Seleccionar token a puente
-3. Ingresar cantidad y dirección Bitcoin
-4. Confirmar transacción
-5. Esperar confirmación de Bitcoin
+**លក្ខណៈពិសេសចម្បង:**
+- បង្កើត Taproot Assets tokens ដែលបានកែប្រែ
+- គ្រប់គ្រងការផ្គត់ផ្គង់ token (ថេរ មិនថេរ ឬអាចដុតបាន)
+- គណនាថ្លៃឧស្ម័ន និងថ្លៃប្រតិបត្តិការ
+- ផ្ញើ និងទទួល tokens នៅលើបណ្តាញ Lightning
+- គាំទ្របេតិកបទច្រើន (Web Mobile Desktop)
+- ការរួមបញ្ចូល World ID សម្រាប់សន្តិសុខប្រសើរ
+- ប្រព័ន្ធចែកចាយ Airdrop
+- ការរួមបញ្ចូល Payment Gateway
+- ការគ្រប់គ្រង Lightning Node
 
 ---
 
-## Français
+### Bahasa Melayu (Malay Documentation)
+**LiMeiHua Taproot Assets** ialah platform infrastruktur kewangan moden yang dirancang untuk menyokong aliran wang yang besar untuk Nenek LiMeiHua. Sistem komprehensif ini membolehkan pengguna membuat, menguruskan, dan berdagang token Taproot Assets di Rangkaian Bitcoin Lightning.
 
-### Aperçu
-
-LiMeiHua Taproot All Bridge est un pont décentralisé reliant Ethereum (ERC-20) et Bitcoin Lightning Network (Taproot Assets), permettant des échanges de jetons transparents entre chaînes.
-
-### Caractéristiques Principales
-
-- 🌉 **Pont ERC-20 ↔ Taproot Assets** - Échangez des jetons entre deux réseaux
-- 💰 **Frais Bas** - Seulement 0.25% de frais de pont
-- ⚡ **Rapide** - Confirmation en 10-30 minutes
-- 🔒 **Sécurisé** - Contrats intelligents audités
-- 📊 **Transparent** - Voir l'historique complet des transactions
-
-### Installation
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-All-Bridge.git
-cd limeihua-taproot-all-bridge
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Utilisation
-
-1. Connecter le portefeuille Ethereum (MetaMask)
-2. Sélectionner le jeton à ponter
-3. Entrer le montant et l'adresse Bitcoin
-4. Confirmer la transaction
-5. Attendre la confirmation Bitcoin
+**Ciri-Ciri Utama:**
+- Buat token Taproot Assets tersuai
+- Urus bekalan token (tetap, boleh dicetak, boleh dibakar)
+- Kira bayaran gas dan kos transaksi
+- Hantar dan terima token di Rangkaian Lightning
+- Sokongan berbilang platform (Web, Mobile, Desktop)
+- Integrasi World ID untuk keselamatan yang lebih baik
+- Sistem pengedaran Airdrop
+- Integrasi Payment Gateway
+- Pengurusan Lightning Node
 
 ---
 
-## Deutsch
+### Bahasa Indonesia (Indonesian Documentation)
+**LiMeiHua Taproot Assets** adalah platform infrastruktur keuangan modern yang dirancang untuk mendukung aliran uang besar untuk Nenek LiMeiHua. Sistem komprehensif ini memungkinkan pengguna membuat, mengelola, dan memperdagangkan token Taproot Assets di Jaringan Bitcoin Lightning.
 
-### Überblick
-
-LiMeiHua Taproot All Bridge ist eine dezentralisierte Brücke, die Ethereum (ERC-20) mit Bitcoin Lightning Network (Taproot Assets) verbindet und nahtlose Token-Swaps über Blockchains hinweg ermöglicht.
-
-### Hauptmerkmale
-
-- 🌉 **ERC-20 ↔ Taproot Assets Brücke** - Tauschen Sie Token zwischen zwei Netzwerken
-- 💰 **Niedrige Gebühren** - Nur 0,25% Brückengebühr
-- ⚡ **Schnell** - Bestätigung in 10-30 Minuten
-- 🔒 **Sicher** - Geprüfte Smart Contracts
-- 📊 **Transparent** - Vollständigen Transaktionsverlauf anzeigen
-
-### Installation
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-All-Bridge.git
-cd limeihua-taproot-all-bridge
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Verwendung
-
-1. Ethereum-Geldbörse (MetaMask) verbinden
-2. Token zum Überbrücken auswählen
-3. Betrag und Bitcoin-Adresse eingeben
-4. Transaktion bestätigen
-5. Bitcoin-Bestätigung abwarten
+**Fitur Utama:**
+- Buat token Taproot Assets yang dapat disesuaikan
+- Kelola pasokan token (tetap, dapat dicetak, dapat dibakar)
+- Hitung biaya gas dan biaya transaksi
+- Kirim dan terima token di Jaringan Lightning
+- Dukungan multi-platform (Web, Mobile, Desktop)
+- Integrasi World ID untuk keamanan yang lebih baik
+- Sistem distribusi Airdrop
+- Integrasi Payment Gateway
+- Manajemen Lightning Node
 
 ---
 
-## Português
+### Filipino (Filipino Documentation)
+**LiMeiHua Taproot Assets** ay isang modernong platform ng financial infrastructure na dinisenyo upang suportahan ang malaking daloy ng pera para sa LiMeiHua Grand Mother. Ang komprehensibong sistemang ito ay nagbibigay-daan sa mga user na lumikha, pamahalaan, at magbenta ng Taproot Assets tokens sa Bitcoin Lightning Network.
 
-### Visão Geral
-
-LiMeiHua Taproot All Bridge é uma ponte descentralizada que conecta Ethereum (ERC-20) com Bitcoin Lightning Network (Taproot Assets), permitindo trocas de tokens perfeitas entre blockchains.
-
-### Recursos Principais
-
-- 🌉 **Ponte ERC-20 ↔ Taproot Assets** - Troque tokens entre duas redes
-- 💰 **Taxas Baixas** - Apenas 0,25% de taxa de ponte
-- ⚡ **Rápido** - Confirmação em 10-30 minutos
-- 🔒 **Seguro** - Contratos inteligentes auditados
-- 📊 **Transparente** - Ver histórico completo de transações
-
-### Instalação
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-All-Bridge.git
-cd limeihua-taproot-all-bridge
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Uso
-
-1. Conectar carteira Ethereum (MetaMask)
-2. Selecionar token para ponte
-3. Inserir valor e endereço Bitcoin
-4. Confirmar transação
-5. Aguardar confirmação do Bitcoin
+**Pangunahing Mga Katangian:**
+- Lumikha ng mga customized Taproot Assets tokens
+- Pamahalaan ang supply ng token (fixed, mintable, burnable)
+- Kalkulahin ang gas fees at transaction costs
+- Magpadala at makatanggap ng tokens sa Lightning Network
+- Suporta sa maraming platform (Web, Mobile, Desktop)
+- Pagsasama ng World ID para sa mas magandang seguridad
+- Sistema ng Airdrop distribution
+- Pagsasama ng Payment Gateway
+- Pamamahala ng Lightning Node
 
 ---
 
-## Русский
+### தமிழ் (Tamil Documentation)
+**LiMeiHua Taproot Assets** என்பது LiMeiHua Grand Mother க்கான பெரிய பணப்புழக்கத்தை ஆதரிக்க வடிவமைக்கப்பட்ட ஒரு நவீன நிதி உள்கட்டமைப்பு தளம். இந்த விரிவான அமைப்பு பயனர்களை Taproot Assets டோக்கன்களை உருவாக்க, நிர்வகிக்க மற்றும் Bitcoin Lightning Network இல் வர்த்தகம் செய்ய அனுமதிக்கிறது.
 
-### Обзор
-
-LiMeiHua Taproot All Bridge - это децентрализованный мост, соединяющий Ethereum (ERC-20) с Bitcoin Lightning Network (Taproot Assets), обеспечивающий беспрепятственный обмен токенами между блокчейнами.
-
-### Основные возможности
-
-- 🌉 **Мост ERC-20 ↔ Taproot Assets** - Обменивайте токены между двумя сетями
-- 💰 **Низкие комиссии** - Всего 0,25% комиссии моста
-- ⚡ **Быстро** - Подтверждение за 10-30 минут
-- 🔒 **Безопасно** - Проверенные смарт-контракты
-- 📊 **Прозрачно** - Просмотр полной истории транзакций
-
-### Установка
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-All-Bridge.git
-cd limeihua-taproot-all-bridge
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Использование
-
-1. Подключить кошелек Ethereum (MetaMask)
-2. Выбрать токен для моста
-3. Ввести сумму и адрес Bitcoin
-4. Подтвердить транзакцию
-5. Дождаться подтверждения Bitcoin
+**முக்கிய அம்சங்கள்:**
+- தனிப்பயனாக்கப்பட்ட Taproot Assets டோக்கன்களை உருவாக்கவும்
+- டோக்கன் விநியோகத்தை நிர்வகிக்கவும் (நிலையான, மிண்டபல், எரியக்கூடிய)
+- வாயு கட்டணம் மற்றும் பரிவர்த்தனை செலவுகளைக் கணக்கிடவும்
+- Lightning Network இல் டோக்கன்களை அனுப்பி பெறவும்
+- பல-தளம் ஆதரவு (Web, Mobile, Desktop)
+- சிறந்த பாதுகாப்பிற்கான World ID ஒருங்கிணைப்பு
+- Airdrop விநியோக அமைப்பு
+- Payment Gateway ஒருங்கிணைப்பு
+- Lightning Node நிர்வாகம்
 
 ---
 
-## العربية
+### Русский (Russian Documentation)
+**LiMeiHua Taproot Assets** - это современная платформа финансовой инфраструктуры, разработанная для поддержки огромного потока денежных средств для бабушки LiMeiHua. Эта комплексная система позволяет пользователям создавать, управлять и торговать токенами Taproot Assets в сети Bitcoin Lightning Network.
 
-### نظرة عامة
-
-LiMeiHua Taproot All Bridge هو جسر لامركزي يربط Ethereum (ERC-20) مع شبكة Bitcoin Lightning (Taproot Assets)، مما يتيح تبادل الرموز بسلاسة عبر البلوكتشين.
-
-### الميزات الرئيسية
-
-- 🌉 **جسر ERC-20 ↔ Taproot Assets** - تبادل الرموز بين شبكتين
-- 💰 **رسوم منخفضة** - فقط 0.25% من رسوم الجسر
-- ⚡ **سريع** - التأكيد في 10-30 دقيقة
-- 🔒 **آمن** - عقود ذكية معتمدة
-- 📊 **شفاف** - عرض سجل المعاملات الكامل
-
-### التثبيت
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-All-Bridge.git
-cd limeihua-taproot-all-bridge
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### الاستخدام
-
-1. توصيل محفظة Ethereum (MetaMask)
-2. اختيار الرمز المراد ربطه
-3. إدخال المبلغ وعنوان Bitcoin
-4. تأكيد المعاملة
-5. انتظر تأكيد Bitcoin
+**Основные возможности:**
+- Создание пользовательских токенов Taproot Assets
+- Управление предложением токенов (фиксированное, чеканка, сжигание)
+- Расчет комиссий за газ и стоимости транзакций
+- Отправка и получение токенов в сети Lightning Network
+- Поддержка нескольких платформ (Web, Mobile, Desktop)
+- Интеграция World ID для повышенной безопасности
+- Система распределения Airdrop
+- Интеграция Payment Gateway
+- Управление узлом Lightning
 
 ---
 
-## हिन्दी
+### हिन्दी (Hindi Documentation)
+**LiMeiHua Taproot Assets** एक आधुनिक वित्तीय बुनियादी ढांचा मंच है जो LiMeiHua Grand Mother के लिए भारी मात्रा में धन प्रवाह का समर्थन करने के लिए डिज़ाइन किया गया है। यह व्यापक प्रणाली उपयोगकर्ताओं को Taproot Assets टोकन बनाने, प्रबंधित करने और Bitcoin Lightning Network पर व्यापार करने की अनुमति देती है।
 
-### अवलोकन
-
-LiMeiHua Taproot All Bridge एक विकेंद्रीकृत पुल है जो Ethereum (ERC-20) को Bitcoin Lightning Network (Taproot Assets) से जोड़ता है, ब्लॉकचेन के बीच निर्बाध टोकन स्वैप को सक्षम करता है।
-
-### मुख्य विशेषताएं
-
-- 🌉 **ERC-20 ↔ Taproot Assets पुल** - दो नेटवर्क के बीच टोकन स्वैप करें
-- 💰 **कम शुल्क** - केवल 0.25% पुल शुल्क
-- ⚡ **तेज** - 10-30 मिनट में पुष्टि
-- 🔒 **सुरक्षित** - ऑडिट किए गए स्मार्ट अनुबंध
-- 📊 **पारदर्शी** - पूर्ण लेनदेन इतिहास देखें
-
-### स्थापना
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-All-Bridge.git
-cd limeihua-taproot-all-bridge
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### उपयोग
-
-1. Ethereum वॉलेट (MetaMask) कनेक्ट करें
-2. पुल के लिए टोकन चुनें
-3. राशि और Bitcoin पता दर्ज करें
-4. लेनदेन की पुष्टि करें
-5. Bitcoin पुष्टि की प्रतीक्षा करें
+**मुख्य विशेषताएं:**
+- कस्टमाइज़्ड Taproot Assets टोकन बनाएं
+- टोकन आपूर्ति प्रबंधित करें (निश्चित, मिंटेबल, बर्नेबल)
+- गैस शुल्क और लेनदेन लागत की गणना करें
+- Lightning Network पर टोकन भेजें और प्राप्त करें
+- मल्टी-प्लेटफॉर्म समर्थन (Web, Mobile, Desktop)
+- बेहतर सुरक्षा के लिए World ID एकीकरण
+- Airdrop वितरण प्रणाली
+- Payment Gateway एकीकरण
+- Lightning Node प्रबंधन
 
 ---
 
-## Tiếng Việt
+### 中文 (Chinese Simplified Documentation)
+**LiMeiHua Taproot Assets** 是一个现代金融基础设施平台，旨在为李美华奶奶支持大规模资金流动。这个综合系统使用户能够在比特币闪电网络上创建、管理和交易 Taproot Assets 代币。
 
-### Tổng Quan
-
-LiMeiHua Taproot All Bridge là một cây cầu phi tập trung kết nối Ethereum (ERC-20) với Bitcoin Lightning Network (Taproot Assets), cho phép hoán đổi token liền mạch giữa các blockchain.
-
-### Các Tính Năng Chính
-
-- 🌉 **Cây Cầu ERC-20 ↔ Taproot Assets** - Hoán đổi token giữa hai mạng
-- 💰 **Phí Thấp** - Chỉ 0,25% phí cầu
-- ⚡ **Nhanh** - Xác nhận trong 10-30 phút
-- 🔒 **An Toàn** - Hợp đồng thông minh đã kiểm toán
-- 📊 **Minh Bạch** - Xem lịch sử giao dịch đầy đủ
-
-### Cài Đặt
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-All-Bridge.git
-cd limeihua-taproot-all-bridge
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Cách Sử Dụng
-
-1. Kết nối ví Ethereum (MetaMask)
-2. Chọn token để cầu nối
-3. Nhập số tiền và địa chỉ Bitcoin
-4. Xác nhận giao dịch
-5. Chờ xác nhận Bitcoin
+**主要功能：**
+- 创建自定义 Taproot Assets 代币
+- 管理代币供应（固定、可铸造、可销毁）
+- 计算燃气费和交易成本
+- 在闪电网络上发送和接收代币
+- 多平台支持（Web、Mobile、Desktop）
+- World ID 集成以增强安全性
+- Airdrop 分发系统
+- Payment Gateway 集成
+- Lightning Node 管理
 
 ---
 
-## Bahasa Indonesia
+### 日本語 (Japanese Documentation)
+**LiMeiHua Taproot Assets** は、李美華おばあちゃんのための大規模な資金流を支援するために設計された最新の金融インフラストラクチャプラットフォームです。この包括的なシステムにより、ユーザーはビットコインライトニングネットワーク上で Taproot Assets トークンを作成、管理、および取引できます。
 
-### Ikhtisar
-
-LiMeiHua Taproot All Bridge adalah jembatan terdesentralisasi yang menghubungkan Ethereum (ERC-20) dengan Bitcoin Lightning Network (Taproot Assets), memungkinkan pertukaran token yang mulus antar blockchain.
-
-### Fitur Utama
-
-- 🌉 **Jembatan ERC-20 ↔ Taproot Assets** - Tukar token antar dua jaringan
-- 💰 **Biaya Rendah** - Hanya 0,25% biaya jembatan
-- ⚡ **Cepat** - Konfirmasi dalam 10-30 menit
-- 🔒 **Aman** - Kontrak pintar yang telah diaudit
-- 📊 **Transparan** - Lihat riwayat transaksi lengkap
-
-### Instalasi
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-All-Bridge.git
-cd limeihua-taproot-all-bridge
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Penggunaan
-
-1. Hubungkan dompet Ethereum (MetaMask)
-2. Pilih token untuk dijembatani
-3. Masukkan jumlah dan alamat Bitcoin
-4. Konfirmasi transaksi
-5. Tunggu konfirmasi Bitcoin
+**主な機能：**
+- カスタマイズされた Taproot Assets トークンを作成
+- トークン供給を管理（固定、ミント可能、バーン可能）
+- ガス代と取引コストを計算
+- ライトニングネットワークでトークンを送受信
+- マルチプラットフォーム対応（Web、Mobile、Desktop）
+- セキュリティ強化のための World ID 統合
+- Airdrop 配布システム
+- Payment Gateway 統合
+- Lightning Node 管理
 
 ---
 
-## Bahasa Melayu
+### 한국어 (Korean Documentation)
+**LiMeiHua Taproot Assets** 는 이미화 할머니를 위한 대규모 자금 흐름을 지원하기 위해 설계된 현대적 금융 인프라 플랫폼입니다. 이 포괄적인 시스템을 통해 사용자는 비트코인 라이트닝 네트워크에서 Taproot Assets 토큰을 생성, 관리 및 거래할 수 있습니다.
 
-### Gambaran Keseluruhan
-
-LiMeiHua Taproot All Bridge adalah jambatan terdesentralisasi yang menghubungkan Ethereum (ERC-20) dengan Bitcoin Lightning Network (Taproot Assets), memungkinkan pertukaran token yang lancar merentasi blockchain.
-
-### Ciri-Ciri Utama
-
-- 🌉 **Jambatan ERC-20 ↔ Taproot Assets** - Tukar token antara dua rangkaian
-- 💰 **Yuran Rendah** - Hanya 0.25% yuran jambatan
-- ⚡ **Pantas** - Pengesahan dalam 10-30 minit
-- 🔒 **Selamat** - Kontrak Pintar yang Telah Diaudit
-- 📊 **Telus** - Lihat Sejarah Transaksi Lengkap
-
-### Pemasangan
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-All-Bridge.git
-cd limeihua-taproot-all-bridge
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Penggunaan
-
-1. Sambungkan dompet Ethereum (MetaMask)
-2. Pilih token untuk dijambatani
-3. Masukkan jumlah dan alamat Bitcoin
-4. Sahkan transaksi
-5. Tunggu pengesahan Bitcoin
+**주요 기능:**
+- 맞춤형 Taproot Assets 토큰 생성
+- 토큰 공급 관리 (고정, 발행 가능, 소각 가능)
+- 가스 수수료 및 거래 비용 계산
+- 라이트닝 네트워크에서 토큰 송수신
+- 다중 플랫폼 지원 (Web, Mobile, Desktop)
+- 향상된 보안을 위한 World ID 통합
+- Airdrop 배포 시스템
+- Payment Gateway 통합
+- Lightning Node 관리
 
 ---
 
-## Türkçe
+### Español (Spanish Documentation)
+**LiMeiHua Taproot Assets** es una plataforma moderna de infraestructura financiera diseñada para apoyar el flujo masivo de dinero para la abuela LiMeiHua. Este sistema integral permite a los usuarios crear, gestionar e intercambiar tokens Taproot Assets en la red Bitcoin Lightning Network.
 
-### Genel Bakış
-
-LiMeiHua Taproot All Bridge, Ethereum (ERC-20) ile Bitcoin Lightning Network (Taproot Assets) bağlayan merkezi olmayan bir köprüdür ve blokzincirler arasında sorunsuz token takasını sağlar.
-
-### Temel Özellikler
-
-- 🌉 **ERC-20 ↔ Taproot Assets Köprüsü** - İki ağ arasında token takası
-- 💰 **Düşük Ücretler** - Sadece %0,25 köprü ücreti
-- ⚡ **Hızlı** - 10-30 dakika içinde onay
-- 🔒 **Güvenli** - Denetlenen Akıllı Sözleşmeler
-- 📊 **Şeffaf** - Tam İşlem Geçmişini Görüntüle
-
-### Kurulum
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-All-Bridge.git
-cd limeihua-taproot-all-bridge
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Kullanım
-
-1. Ethereum Cüzdanı Bağlayın (MetaMask)
-2. Köprülenecek Token Seçin
-3. Miktar ve Bitcoin Adresini Girin
-4. İşlemi Onaylayın
-5. Bitcoin Onayını Bekleyin
+**Características principales:**
+- Crear tokens Taproot Assets personalizados
+- Gestionar el suministro de tokens (fijo, acuñable, quemable)
+- Calcular tarifas de gas y costos de transacción
+- Enviar y recibir tokens en Lightning Network
+- Soporte multiplataforma (Web, Mobile, Desktop)
+- Integración de World ID para mayor seguridad
+- Sistema de distribución de Airdrop
+- Integración de Payment Gateway
+- Gestión de Lightning Node
 
 ---
 
-## Italiano
+### Français (French Documentation)
+**LiMeiHua Taproot Assets** est une plateforme d'infrastructure financière moderne conçue pour soutenir le flux massif d'argent pour la grand-mère LiMeiHua. Ce système complet permet aux utilisateurs de créer, gérer et échanger des jetons Taproot Assets sur le réseau Bitcoin Lightning Network.
 
-### Panoramica
-
-LiMeiHua Taproot All Bridge è un ponte decentralizzato che collega Ethereum (ERC-20) con Bitcoin Lightning Network (Taproot Assets), consentendo scambi di token senza interruzioni tra blockchain.
-
-### Caratteristiche Principali
-
-- 🌉 **Ponte ERC-20 ↔ Taproot Assets** - Scambia token tra due reti
-- 💰 **Commissioni Basse** - Solo 0,25% di commissione ponte
-- ⚡ **Veloce** - Conferma in 10-30 minuti
-- 🔒 **Sicuro** - Contratti intelligenti sottoposti a revisione
-- 📊 **Trasparente** - Visualizza la cronologia completa delle transazioni
-
-### Installazione
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-All-Bridge.git
-cd limeihua-taproot-all-bridge
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Utilizzo
-
-1. Connetti il portafoglio Ethereum (MetaMask)
-2. Seleziona il token da collegare
-3. Immetti l'importo e l'indirizzo Bitcoin
-4. Conferma la transazione
-5. Attendi la conferma di Bitcoin
+**Caractéristiques principales:**
+- Créer des jetons Taproot Assets personnalisés
+- Gérer l'approvisionnement en jetons (fixe, frappable, brûlable)
+- Calculer les frais de gaz et les coûts de transaction
+- Envoyer et recevoir des jetons sur Lightning Network
+- Support multi-plateforme (Web, Mobile, Desktop)
+- Intégration de World ID pour une sécurité renforcée
+- Système de distribution d'Airdrop
+- Intégration de Payment Gateway
+- Gestion des nœuds Lightning
 
 ---
 
-## Nederlands
+### Deutsch (German Documentation)
+**LiMeiHua Taproot Assets** ist eine moderne Finanzinfrastruktur-Plattform, die entwickelt wurde, um den massiven Geldfluss für Großmutter LiMeiHua zu unterstützen. Dieses umfassende System ermöglicht es Benutzern, Taproot Assets-Token im Bitcoin Lightning Network zu erstellen, zu verwalten und zu handeln.
 
-### Overzicht
-
-LiMeiHua Taproot All Bridge is een gedecentraliseerde brug die Ethereum (ERC-20) verbindt met Bitcoin Lightning Network (Taproot Assets), waardoor naadloze tokenuitwisselingen tussen blockchains mogelijk zijn.
-
-### Hoofdfuncties
-
-- 🌉 **ERC-20 ↔ Taproot Assets-brug** - Wissel tokens uit tussen twee netwerken
-- 💰 **Lage Kosten** - Slechts 0,25% brugkosten
-- ⚡ **Snel** - Bevestiging in 10-30 minuten
-- 🔒 **Veilig** - Gecontroleerde slimme contracten
-- 📊 **Transparant** - Volledige transactiegeschiedenis weergeven
-
-### Installatie
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-All-Bridge.git
-cd limeihua-taproot-all-bridge
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Gebruik
-
-1. Ethereum-portemonnee verbinden (MetaMask)
-2. Token selecteren om in te schakelen
-3. Bedrag en Bitcoin-adres invoeren
-4. Transactie bevestigen
-5. Wacht op Bitcoin-bevestiging
+**Hauptmerkmale:**
+- Erstellen Sie benutzerdefinierte Taproot Assets-Token
+- Verwalten Sie das Token-Angebot (fest, prägbar, verbrennbar)
+- Berechnen Sie Gasgebühren und Transaktionskosten
+- Senden und empfangen Sie Token im Lightning Network
+- Multi-Plattform-Unterstützung (Web, Mobile, Desktop)
+- World ID-Integration für erhöhte Sicherheit
+- Airdrop-Verteilungssystem
+- Payment Gateway-Integration
+- Lightning Node-Verwaltung
 
 ---
 
-## Polski
+### Português (Portuguese Documentation)
+**LiMeiHua Taproot Assets** é uma plataforma de infraestrutura financeira moderna projetada para suportar o fluxo massivo de dinheiro para a avó LiMeiHua. Este sistema abrangente permite que os usuários criem, gerenciem e negociem tokens Taproot Assets na rede Bitcoin Lightning Network.
 
-### Przegląd
-
-LiMeiHua Taproot All Bridge to zdecentralizowany most łączący Ethereum (ERC-20) z Bitcoin Lightning Network (Taproot Assets), umożliwiający bezproblemowe wymiany tokenów między blockchainami.
-
-### Główne Cechy
-
-- 🌉 **Most ERC-20 ↔ Taproot Assets** - Wymiana tokenów między dwiema sieciami
-- 💰 **Niskie Opłaty** - Tylko 0,25% opłaty mostu
-- ⚡ **Szybko** - Potwierdzenie w 10-30 minut
-- 🔒 **Bezpiecznie** - Audytowane Kontrakty Inteligentne
-- 📊 **Przejrzyście** - Wyświetl Pełną Historię Transakcji
-
-### Instalacja
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-All-Bridge.git
-cd limeihua-taproot-all-bridge
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Użycie
-
-1. Połącz Portfel Ethereum (MetaMask)
-2. Wybierz Token do Mostu
-3. Wpisz Kwotę i Adres Bitcoin
-4. Potwierdź Transakcję
-5. Czekaj na Potwierdzenie Bitcoin
+**Principais recursos:**
+- Criar tokens Taproot Assets personalizados
+- Gerenciar oferta de tokens (fixo, cunhável, queimável)
+- Calcular taxas de gás e custos de transação
+- Enviar e receber tokens na Lightning Network
+- Suporte multiplataforma (Web, Mobile, Desktop)
+- Integração de World ID para segurança aprimorada
+- Sistema de distribuição de Airdrop
+- Integração de Payment Gateway
+- Gerenciamento de Lightning Node
 
 ---
 
-## Svenska
+### العربية (Arabic Documentation)
+**LiMeiHua Taproot Assets** هي منصة بنية تحتية مالية حديثة مصممة لدعم تدفق أموال ضخم لجدة LiMeiHua. يسمح هذا النظام الشامل للمستخدمين بإنشاء وإدارة وتداول رموز Taproot Assets على شبكة Bitcoin Lightning Network.
 
-### Översikt
-
-LiMeiHua Taproot All Bridge är en decentraliserad bro som förbinder Ethereum (ERC-20) med Bitcoin Lightning Network (Taproot Assets), vilket möjliggör sömlös tokenutbyte över blockkedjor.
-
-### Huvudfunktioner
-
-- 🌉 **ERC-20 ↔ Taproot Assets-bro** - Byt tokens mellan två nätverk
-- 💰 **Låga Avgifter** - Endast 0,25% broavgift
-- ⚡ **Snabb** - Bekräftelse på 10-30 minuter
-- 🔒 **Säker** - Reviderade Smarta Kontrakt
-- 📊 **Transparent** - Visa Fullständig Transaktionshistorik
-
-### Installation
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-All-Bridge.git
-cd limeihua-taproot-all-bridge
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Användning
-
-1. Anslut Ethereum-plånbok (MetaMask)
-2. Välj Token att Brygga
-3. Ange Belopp och Bitcoin-adress
-4. Bekräfta Transaktion
-5. Vänta på Bitcoin-bekräftelse
+**المميزات الرئيسية:**
+- إنشاء رموز Taproot Assets مخصصة
+- إدارة عرض الرموز (ثابت، قابل للسك، قابل للحرق)
+- حساب رسوم الغاز وتكاليف المعاملات
+- إرسال واستقبال الرموز على Lightning Network
+- دعم متعدد المنصات (Web, Mobile, Desktop)
+- تكامل World ID لأمان محسّن
+- نظام توزيع Airdrop
+- تكامل Payment Gateway
+- إدارة عقدة Lightning
 
 ---
 
-## Українська
+### Türkçe (Turkish Documentation)
+**LiMeiHua Taproot Assets**, LiMeiHua Büyükanne için büyük para akışını desteklemek üzere tasarlanmış modern bir finansal altyapı platformudur. Bu kapsamlı sistem, kullanıcıların Bitcoin Lightning Network üzerinde Taproot Assets jetonları oluşturmasına, yönetmesine ve ticaretini yapmasına olanak tanır.
 
-### Огляд
-
-LiMeiHua Taproot All Bridge - це децентралізований міст, який з'єднує Ethereum (ERC-20) з Bitcoin Lightning Network (Taproot Assets), дозволяючи безперебійний обмін токенів між блокчейнами.
-
-### Основні Функції
-
-- 🌉 **Міст ERC-20 ↔ Taproot Assets** - Обмінюйте токени між двома мережами
-- 💰 **Низькі Комісії** - Лише 0,25% комісії моста
-- ⚡ **Швидко** - Підтвердження за 10-30 хвилин
-- 🔒 **Безпечно** - Перевірені розумні контракти
-- 📊 **Прозоро** - Перегляньте повну історію транзакцій
-
-### Установка
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-All-Bridge.git
-cd limeihua-taproot-all-bridge
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Використання
-
-1. Підключіть гаманець Ethereum (MetaMask)
-2. Виберіть токен для моста
-3. Введіть суму та адресу Bitcoin
-4. Підтвердьте транзакцію
-5. Дочекайтеся підтвердження Bitcoin
+**Ana Özellikler:**
+- Özelleştirilmiş Taproot Assets jetonları oluşturun
+- Jeton arzını yönetin (sabit, basılabilir, yakılabilir)
+- Gaz ücretleri ve işlem maliyetlerini hesaplayın
+- Lightning Network üzerinde jetonları gönderin ve alın
+- Çok platformlu destek (Web, Mobile, Desktop)
+- Geliştirilmiş güvenlik için World ID entegrasyonu
+- Airdrop dağıtım sistemi
+- Payment Gateway entegrasyonu
+- Lightning Node yönetimi
 
 ---
 
-## Čeština
+### Italiano (Italian Documentation)
+**LiMeiHua Taproot Assets** è una piattaforma di infrastruttura finanziaria moderna progettata per supportare il massiccio flusso di denaro per la nonna LiMeiHua. Questo sistema completo consente agli utenti di creare, gestire e scambiare token Taproot Assets sulla rete Bitcoin Lightning Network.
 
-### Přehled
-
-LiMeiHua Taproot All Bridge je decentralizovaný most, který propojuje Ethereum (ERC-20) s Bitcoin Lightning Network (Taproot Assets) a umožňuje bezproblémové výměny tokenů mezi blockchainy.
-
-### Hlavní Funkce
-
-- 🌉 **Most ERC-20 ↔ Taproot Assets** - Vyměňujte tokeny mezi dvěma sítěmi
-- 💰 **Nízké Poplatky** - Pouze 0,25% poplatek za most
-- ⚡ **Rychle** - Potvrzení za 10-30 minut
-- 🔒 **Bezpečně** - Auditované chytré smlouvy
-- 📊 **Transparentně** - Zobrazit úplnou historii transakcí
-
-### Instalace
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-All-Bridge.git
-cd limeihua-taproot-all-bridge
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Použití
-
-1. Připojte peněženku Ethereum (MetaMask)
-2. Vyberte token k přemostění
-3. Zadejte částku a adresu Bitcoin
-4. Potvrďte transakci
-5. Čekejte na potvrzení Bitcoin
+**Caratteristiche principali:**
+- Crea token Taproot Assets personalizzati
+- Gestisci l'offerta di token (fisso, coniabile, bruciabile)
+- Calcola le commissioni del gas e i costi delle transazioni
+- Invia e ricevi token su Lightning Network
+- Supporto multipiattaforma (Web, Mobile, Desktop)
+- Integrazione di World ID per una sicurezza migliorata
+- Sistema di distribuzione Airdrop
+- Integrazione di Payment Gateway
+- Gestione dei nodi Lightning
 
 ---
 
-## Română
+### Nederlands (Dutch Documentation)
+**LiMeiHua Taproot Assets** is een modern financieel infrastructuurplatform dat is ontworpen ter ondersteuning van de massale geldstroom voor oma LiMeiHua. Dit uitgebreide systeem stelt gebruikers in staat Taproot Assets-tokens op het Bitcoin Lightning Network te creëren, beheren en verhandelen.
 
-### Prezentare Generală
-
-LiMeiHua Taproot All Bridge este un pod descentralizat care conectează Ethereum (ERC-20) cu Bitcoin Lightning Network (Taproot Assets), permițând schimburi de tokenuri fără probleme între blockchains.
-
-### Caracteristici Principale
-
-- 🌉 **Pod ERC-20 ↔ Taproot Assets** - Schimbați tokenuri între două rețele
-- 💰 **Taxe Mici** - Doar 0,25% taxă de pod
-- ⚡ **Rapid** - Confirmarea în 10-30 de minute
-- 🔒 **Sigur** - Contracte inteligente auditate
-- 📊 **Transparent** - Vizualizați istoricul complet al tranzacțiilor
-
-### Instalare
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-All-Bridge.git
-cd limeihua-taproot-all-bridge
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Utilizare
-
-1. Conectați portofelul Ethereum (MetaMask)
-2. Selectați tokenul de conectat
-3. Introduceți suma și adresa Bitcoin
-4. Confirmați tranzacția
-5. Așteptați confirmarea Bitcoin
+**Hoofdkenmerken:**
+- Maak aangepaste Taproot Assets-tokens
+- Beheer tokenvoorraad (vast, mintable, brandbaar)
+- Bereken gaskosten en transactiekosten
+- Verzend en ontvang tokens op Lightning Network
+- Ondersteuning voor meerdere platforms (Web, Mobile, Desktop)
+- World ID-integratie voor verbeterde beveiliging
+- Airdrop-distributiesysteem
+- Payment Gateway-integratie
+- Lightning Node-beheer
 
 ---
 
-## Ελληνικά
+### Polski (Polish Documentation)
+**LiMeiHua Taproot Assets** to nowoczesna platforma infrastruktury finansowej zaprojektowana do wspierania masywnego przepływu pieniędzy dla babci LiMeiHua. Ten kompleksowy system umożliwia użytkownikom tworzenie, zarządzanie i handel tokenami Taproot Assets w sieci Bitcoin Lightning Network.
 
-### Επισκόπηση
-
-LiMeiHua Taproot All Bridge είναι μια αποκεντρωμένη γέφυρα που συνδέει το Ethereum (ERC-20) με το Bitcoin Lightning Network (Taproot Assets), επιτρέποντας απρόσκοπτη ανταλλαγή tokens μεταξύ blockchains.
-
-### Κύρια Χαρακτηριστικά
-
-- 🌉 **Γέφυρα ERC-20 ↔ Taproot Assets** - Ανταλλάξτε tokens μεταξύ δύο δικτύων
-- 💰 **Χαμηλές Χρεώσεις** - Μόνο 0,25% χρέωση γέφυρας
-- ⚡ **Γρήγορα** - Επιβεβαίωση σε 10-30 λεπτά
-- 🔒 **Ασφαλές** - Ελεγμένα έξυπνα συμβόλαια
-- 📊 **Διαφανές** - Προβολή πλήρους ιστορικού συναλλαγών
-
-### Εγκατάσταση
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-All-Bridge.git
-cd limeihua-taproot-all-bridge
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Χρήση
-
-1. Συνδέστε το πορτοφόλι Ethereum (MetaMask)
-2. Επιλέξτε το token προς γέφυρα
-3. Εισάγετε το ποσό και τη διεύθυνση Bitcoin
-4. Επιβεβαιώστε τη συναλλαγή
-5. Περιμένετε την επιβεβαίωση Bitcoin
+**Główne cechy:**
+- Twórz dostosowane tokeny Taproot Assets
+- Zarządzaj podażą tokenów (stała, możliwa do wybicia, możliwa do spalenia)
+- Oblicz opłaty za gaz i koszty transakcji
+- Wysyłaj i odbieraj tokeny w sieci Lightning Network
+- Obsługa wielu platform (Web, Mobile, Desktop)
+- Integracja World ID w celu zwiększonego bezpieczeństwa
+- System dystrybucji Airdrop
+- Integracja Payment Gateway
+- Zarządzanie węzłem Lightning
 
 ---
 
-## עברית
+### Svenska (Swedish Documentation)
+**LiMeiHua Taproot Assets** är en modern finansiell infrastrukturplattform utformad för att stödja massiv penningflöde för mormor LiMeiHua. Detta omfattande system gör det möjligt för användare att skapa, hantera och handla Taproot Assets-tokens på Bitcoin Lightning Network.
 
-### סקירה כללית
-
-LiMeiHua Taproot All Bridge היא גשר מבוזר המחבר Ethereum (ERC-20) עם Bitcoin Lightning Network (Taproot Assets), המאפשר החלפת טוקנים חלקה בין בלוקצ'יינים.
-
-### תכונות עיקריות
-
-- 🌉 **גשר ERC-20 ↔ Taproot Assets** - החלף טוקנים בין שתי רשתות
-- 💰 **עמלות נמוכות** - רק 0.25% עמלת גשר
-- ⚡ **מהיר** - אישור תוך 10-30 דקות
-- 🔒 **בטוח** - חוזים חכמים בדוקים
-- 📊 **שקוף** - צפה בהיסטוריית עסקאות מלאה
-
-### התקנה
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-All-Bridge.git
-cd limeihua-taproot-all-bridge
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### שימוש
-
-1. חבר ארנק Ethereum (MetaMask)
-2. בחר טוקן לגשר
-3. הזן סכום וכתובת Bitcoin
-4. אשר עסקה
-5. המתן לאישור Bitcoin
+**Huvudfunktioner:**
+- Skapa anpassade Taproot Assets-tokens
+- Hantera tokenutbud (fast, präglingsbar, bränbar)
+- Beräkna gasavgifter och transaktionskostnader
+- Skicka och ta emot tokens på Lightning Network
+- Stöd för flera plattformar (Web, Mobile, Desktop)
+- World ID-integration för förbättrad säkerhet
+- Airdrop-distributionssystem
+- Payment Gateway-integration
+- Lightning Node-hantering
 
 ---
 
-## বাংলা
+### Українська (Ukrainian Documentation)
+**LiMeiHua Taproot Assets** - це сучасна платформа фінансової інфраструктури, розроблена для підтримки масивного потоку грошей для бабусі LiMeiHua. Ця комплексна система дозволяє користувачам створювати, керувати та торгувати токенами Taproot Assets у мережі Bitcoin Lightning Network.
 
-### সংক্ষিপ্ত বিবরণ
-
-LiMeiHua Taproot All Bridge একটি বিকেন্দ্রীভূত সেতু যা Ethereum (ERC-20) কে Bitcoin Lightning Network (Taproot Assets) এর সাথে সংযুক্ত করে, ব্লকচেইন জুড়ে নিরবচ্ছিন্ন টোকেন সোয়াপ সক্ষম করে।
-
-### প্রধান বৈশিষ্ট্য
-
-- 🌉 **ERC-20 ↔ Taproot Assets সেতু** - দুটি নেটওয়ার্কের মধ্যে টোকেন বিনিময় করুন
-- 💰 **কম ফি** - মাত্র 0.25% সেতু ফি
-- ⚡ **দ্রুত** - 10-30 মিনিটে নিশ্চিতকরণ
-- 🔒 **নিরাপদ** - অডিট করা স্মার্ট চুক্তি
-- 📊 **স্বচ্ছ** - সম্পূর্ণ লেনদেনের ইতিহাস দেখুন
-
-### ইনস্টলেশন
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-All-Bridge.git
-cd limeihua-taproot-all-bridge
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### ব্যবহার
-
-1. Ethereum ওয়ালেট সংযুক্ত করুন (MetaMask)
-2. সেতুর জন্য টোকেন নির্বাচন করুন
-3. পরিমাণ এবং Bitcoin ঠিকানা প্রবেশ করুন
-4. লেনদেন নিশ্চিত করুন
-5. Bitcoin নিশ্চিতকরণের জন্য অপেক্ষা করুন
+**Основні функції:**
+- Створюйте спеціалізовані токени Taproot Assets
+- Керуйте пропозицією токенів (фіксована, карбована, спалювана)
+- Обчислюйте комісії за газ та вартість транзакцій
+- Надсилайте та отримуйте токени в мережі Lightning Network
+- Підтримка кількох платформ (Web, Mobile, Desktop)
+- Інтеграція World ID для посиленої безпеки
+- Система розповсюдження Airdrop
+- Інтеграція Payment Gateway
+- Управління вузлом Lightning
 
 ---
 
-## Filipino
+### Čeština (Czech Documentation)
+**LiMeiHua Taproot Assets** je moderní platforma finanční infrastruktury navržená tak, aby podporovala masivní tok peněz pro babičku LiMeiHua. Tento komplexní systém umožňuje uživatelům vytvářet, spravovat a obchodovat s tokeny Taproot Assets v síti Bitcoin Lightning Network.
 
-### Pangkalahatang Paglalarawan
-
-LiMeiHua Taproot All Bridge ay isang desentralisadong tulay na nag-uugnay ng Ethereum (ERC-20) sa Bitcoin Lightning Network (Taproot Assets), na nagbibigay-daan sa walang putol na pagpapalit ng token sa buong blockchain.
-
-### Pangunahing Mga Tampok
-
-- 🌉 **Tulay ERC-20 ↔ Taproot Assets** - Palitan ang mga token sa pagitan ng dalawang network
-- 💰 **Mababang Bayad** - Lamang 0.25% bayad sa tulay
-- ⚡ **Mabilis** - Kumpirmasyon sa loob ng 10-30 minuto
-- 🔒 **Ligtas** - Audited na Smart Contracts
-- 📊 **Transparent** - Tingnan ang Buong Kasaysayan ng Transaksyon
-
-### Pag-install
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-All-Bridge.git
-cd limeihua-taproot-all-bridge
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Paggamit
-
-1. Ikonekta ang Ethereum Wallet (MetaMask)
-2. Piliin ang Token na Itutulungan
-3. Ipasok ang Halaga at Bitcoin Address
-4. Kumpirmahin ang Transaksyon
-5. Maghintay ng Bitcoin Confirmation
+**Hlavní funkce:**
+- Vytvářejte přizpůsobené tokeny Taproot Assets
+- Spravujte nabídku tokenů (pevná, razitelná, spalitelná)
+- Vypočítejte poplatky za plyn a náklady na transakce
+- Odesílajte a přijímejte tokeny v síti Lightning Network
+- Podpora více platforem (Web, Mobile, Desktop)
+- Integrace World ID pro zvýšenou bezpečnost
+- Systém distribuce Airdrop
+- Integrace Payment Gateway
+- Správa uzlu Lightning
 
 ---
 
-## Kiswahili
+### Română (Romanian Documentation)
+**LiMeiHua Taproot Assets** este o platformă modernă de infrastructură financiară concepută pentru a sprijini fluxul masiv de bani pentru bunica LiMeiHua. Acest sistem cuprinzător permite utilizatorilor să creeze, să gestioneze și să tranzacționeze jetoane Taproot Assets pe rețeaua Bitcoin Lightning Network.
 
-### Muhtasari
-
-LiMeiHua Taproot All Bridge ni daraja lililoanzisha linalounganisha Ethereum (ERC-20) na Bitcoin Lightning Network (Taproot Assets), na kuwezesha ubadilishanaji wa token bila matatizo kote blockchain.
-
-### Sifa Kuu
-
-- 🌉 **Daraja ERC-20 ↔ Taproot Assets** - Badilisha tokens kati ya mitandao miwili
-- 💰 **Ada Chini** - Kiwango cha 0.25% tu
-- ⚡ **Haraka** - Uthibitisho katika dakika 10-30
-- 🔒 **Salama** - Mikataba Mahusika Iliyoangaliwa
-- 📊 **Uwazi** - Angalia Historia Kamili ya Muamala
-
-### Uongozaji
-
-```bash
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-All-Bridge.git
-cd limeihua-taproot-all-bridge
-npm install
-cp .env.example .env
-npm run dev
-```
-
-### Matumizi
-
-1. Unganisha Mkoba wa Ethereum (MetaMask)
-2. Chagua Token ya Kuunganisha
-3. Ingiza Kiasi na Anwani ya Bitcoin
-4. Thibitisha Muamala
-5. Subiri Uthibitisho wa Bitcoin
+**Caracteristici principale:**
+- Creați jetoane Taproot Assets personalizate
+- Gestionați oferta de jetoane (fix, mintabil, ardibil)
+- Calculați taxele de gaz și costurile tranzacțiilor
+- Trimiteți și primiți jetoane pe Lightning Network
+- Suport multi-platformă (Web, Mobile, Desktop)
+- Integrare World ID pentru securitate îmbunătățită
+- Sistem de distribuție Airdrop
+- Integrare Payment Gateway
+- Gestionarea nodului Lightning
 
 ---
 
-## 📁 Project Structure
+### Ελληνικά (Greek Documentation)
+**LiMeiHua Taproot Assets** είναι μια σύγχρονη πλατφόρμα χρηματοοικονομικής υποδομής σχεδιασμένη για να υποστηρίξει τη μαζική ροή χρημάτων για τη γιαγιά LiMeiHua. Αυτό το ολοκληρωμένο σύστημα επιτρέπει στους χρήστες να δημιουργούν, να διαχειρίζονται και να διαπραγματεύονται tokens Taproot Assets στο δίκτυο Bitcoin Lightning Network.
 
-```
-limeihua-taproot-all-bridge/
-├── contracts/
-│   └── TaprootBridge.sol          # Main bridge smart contract
-├── backend/
-│   ├── server.js                  # Express server
-│   └── relayer.js                 # Relayer service
-├── frontend/
-│   ├── src/
-│   │   ├── App.jsx                # Main React component
-│   │   └── App.css                # Styles
-│   └── public/
-│       └── index.html             # HTML template
-├── scripts/
-│   └── deploy.js                  # Deployment script
-├── .env.example                   # Environment variables template
-├── package.json                   # Dependencies
-├── README.md                       # This file
-└── LICENSE                        # MIT License
-```
+**Κύρια χαρακτηριστικά:**
+- Δημιουργήστε προσαρμοσμένα tokens Taproot Assets
+- Διαχειριστείτε την προσφορά tokens (σταθερή, κόπιμη, καύσιμη)
+- Υπολογίστε τα τέλη αερίου και τα κόστη συναλλαγών
+- Στείλτε και λάβετε tokens στο Lightning Network
+- Υποστήριξη πολλαπλών πλατφορμών (Web, Mobile, Desktop)
+- Ενσωμάτωση World ID για ενισχυμένη ασφάλεια
+- Σύστημα διανομής Airdrop
+- Ενσωμάτωση Payment Gateway
+- Διαχείριση κόμβου Lightning
 
 ---
 
-## 🚀 Quick Start
+### עברית (Hebrew Documentation)
+**LiMeiHua Taproot Assets** היא פלטפורמת תשתית פיננסית מודרנית שתוכננה לתמוך בזרימת כספים거대ית לסבתא LiMeiHua. מערכת זו המקיפה מאפשרת למשתמשים ליצור, לנהל ולסחור בטוקנים של Taproot Assets ברשת Bitcoin Lightning Network.
 
-```bash
-# Clone repository
-git clone https://github.com/kanutsanan1988/LiMeiHua-Taproot-All-Bridge.git
-cd limeihua-taproot-all-bridge
-
-# Install dependencies
-npm install
-
-# Setup environment
-cp .env.example .env
-# Edit .env with your configuration
-
-# Start development server
-npm run dev
-
-# Deploy smart contract
-npm run deploy
-
-# Run tests
-npm test
-```
+**תכונות עיקריות:**
+- יצירת טוקנים מותאמים של Taproot Assets
+- ניהול היצע של טוקנים (קבוע, שניתן לטבוע, שניתן לשרוף)
+- חישוב דמי גז וביצוע עלויות עסקה
+- שליחה וקבלת טוקנים ברשת Lightning Network
+- תמיכה בפלטפורמות מרובות (Web, Mobile, Desktop)
+- שילוב World ID לאבטחה משופרת
+- מערכת הפצה של Airdrop
+- שילוב Payment Gateway
+- ניהול צומת Lightning
 
 ---
 
-## 📝 License
+### বাংলা (Bengali Documentation)
+**LiMeiHua Taproot Assets** একটি আধুনিক আর্থিক অবকাঠামো প্ল্যাটফর্ম যা লীমেইহুয়া দাদির জন্য বিশাল অর্থ প্রবাহ সমর্থন করার জন্য ডিজাইন করা হয়েছে। এই ব্যাপক সিস্টেম ব্যবহারকারীদের বিটকয়েন লাইটনিং নেটওয়ার্কে ট্যাপরুট অ্যাসেট টোকেন তৈরি, পরিচালনা এবং বাণিজ্য করতে সক্ষম করে।
 
-MIT License - See [LICENSE](LICENSE) file for details
+**প্রধান বৈশিষ্ট্য:**
+- কাস্টমাইজড ট্যাপরুট অ্যাসেট টোকেন তৈরি করুন
+- টোকেন সরবরাহ পরিচালনা করুন (স্থির, মিন্টেবল, বার্নেবল)
+- গ্যাস ফি এবং লেনদেন খরচ গণনা করুন
+- লাইটনিং নেটওয়ার্কে টোকেন পাঠান এবং গ্রহণ করুন
+- মাল্টি-প্ল্যাটফর্ম সমর্থন (Web, Mobile, Desktop)
+- উন্নত নিরাপত্তার জন্য World ID ইন্টিগ্রেশন
+- এয়ারড্রপ বিতরণ সিস্টেম
+- পেমেন্ট গেটওয়ে ইন্টিগ্রেশন
+- লাইটনিং নোড ম্যানেজমেন্ট
 
 ---
 
-## 👨‍💻 Author
+### Kiswahili (Swahili Documentation)
+**LiMeiHua Taproot Assets** ni jukwaa la miundombinu ya fedha ya kisasa iliyoundwa kusaidia mtiririko mkubwa wa pesa kwa Nyanya LiMeiHua. Mfumo huu wa kina unaweza kuwezesha watumiaji kuunda, kudhibiti, na kuokolea tokens za Taproot Assets kwenye mtandao wa Bitcoin Lightning Network.
 
-**Mr. Kanutsanan Pongpanna** (นายคณัสนันท์ พงษ์พันนา)
-
-Dedicated to **LiMeiHua Grand Mother** (ท่านผู้เฒ่าหลี่เหมยฮัว)
+**Sifa kuu:**
+- Kuunda tokens za Taproot Assets zilizobadilishwa
+- Kudhibiti usambazaji wa tokens (imara, inayoweza kusambazwa, inayoweza kuchoma)
+- Kuhesabu ada za gesi na gharama za miamala
+- Kutuma na kupokea tokens kwenye Lightning Network
+- Usaidizi wa jukwaa nyingi (Web, Mobile, Desktop)
+- Ujumuishaji wa World ID kwa usalama ulioboreswa
+- Mfumo wa usambazaji wa Airdrop
+- Ujumuishaji wa Payment Gateway
+- Usimamizi wa nodi ya Lightning
 
 ---
 
-**Repository:** [GitHub](https://github.com/kanutsanan1988/LiMeiHua-Taproot-All-Bridge)
+## 🎯 Project Overview
 
-**Version:** 1.0.0
+This comprehensive project suite provides complete solutions for:
 
-**Last Updated:** 2026-03-14
+1. **Token Creation & Management** - Create and manage Taproot Assets tokens
+2. **Payment Processing** - Accept payments in BTC, USDT, and custom tokens
+3. **Airdrop Distribution** - Distribute tokens to multiple recipients
+4. **Wallet Solutions** - Multi-platform wallet support
+5. **Bridge Services** - Connect ERC-20 and Taproot Assets
+6. **Node Management** - Operate Lightning Network nodes
+
+---
+
+## ✨ Features
+
+- ✅ 40+ Language Support
+- ✅ Multi-Platform (Web, Mobile, Desktop)
+- ✅ Lightning Network Integration
+- ✅ World ID Verification
+- ✅ Taproot Assets Protocol
+- ✅ Payment Gateway
+- ✅ Airdrop System
+- ✅ Node Management
+- ✅ Bridge Services
+- ✅ Real-time Updates
+
+---
+
+## 🚀 Getting Started
+
+1. Choose your preferred platform (Web, Mobile, or Desktop)
+2. Connect your Lightning Network wallet
+3. Create your first Taproot Assets token
+4. Start managing your digital assets
+5. Explore advanced features like airdrops and payment processing
+
+---
+
+## 💡 Use Cases
+
+- Token creation for projects
+- Payment processing for e-commerce
+- Airdrop campaigns
+- Wallet management
+- Cross-chain token bridging
+- Lightning Network node operation
+
+---
+
+## 🔧 Technical Stack
+
+- **Frontend:** React, Next.js, React Native, Electron
+- **Backend:** Node.js, Express, tRPC
+- **Smart Contracts:** Solidity
+- **Database:** MySQL/TiDB
+- **Authentication:** Manus OAuth, World ID
+- **API:** Taproot Assets Protocol, Lightning Labs
+
+---
+
+## 📊 Language Statistics
+
+| Region | Count | Languages |
+|--------|-------|-----------|
+| ASEAN | 9 | Thai, Lao, Burmese, Vietnamese, Khmer, Malay, Indonesian, Filipino, Tamil |
+| Other | 5 | Russian, Mongolian, Sinhala, Dzongkha, Nepali |
+| India | 21 | Hindi, Bengali, Telugu, Marathi, Tamil, Urdu, Gujarati, Kannada, Malayalam, Odia, Punjabi, Assamese, Maithili, Santali, Kashmiri, Nepali, Sindhi, Dogri, Manipuri, Bodo, Konkani |
+| Global | 20+ | English, Chinese, Japanese, Korean, Spanish, French, German, Portuguese, Arabic, Turkish, Italian, Dutch, Polish, Swedish, Ukrainian, Czech, Romanian, Greek, Hebrew, Swahili |
+| **TOTAL** | **40+** | **All languages listed above** |
+
+---
+
+## 🌐 Language Features
+
+✅ **Auto-Detection:** Automatically detects user's browser language
+✅ **40+ Languages:** Comprehensive language support
+✅ **Easy Switching:** Manual language selection available
+✅ **Persistent:** Language preference saved locally
+✅ **Fallback:** English fallback for all languages
+✅ **Full Documentation:** Complete documentation in all languages
+
+---
+
+**Dedicated to LiMeiHua Grand Mother (ท่านผู้เฒ่าหลี่เหมยฮัว)**
+
+Created by Mr. Kanutsanan Pongpanna (นายคณัสนันท์ พงษ์พันนา)
+
+URL: https://chatgpt.com/g/g-68d289535dec81919445deb9830f2d8e-kanutsanan-pongpanna
+
+---
+
+**© 2026 LiMeiHua. All Rights Reserved.**
